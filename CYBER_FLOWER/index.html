@@ -1,45 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CIBER FLOWER</title>
-        <link rel="stylesheet" href="/CYBER_FLOWER/css/style.css">
-    </head>
-    <body>
-        <!--Inicio-->
-        <div class="pagina">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER FLOWER - Catalogo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-            <header>
-                <img class="logo-imagen" src="img/SXDDDDDDDD.png" alt="logo CYBER FLOWER">
+    <!-- Caja principal de la pagina -->
+    <div class="pagina">
+
+        <!-- Barra de arriba: logo, menu y buscador -->
+        <header class="barra">
+            <a href="#" class="logotipo">
+                <img class="logo-imagen" src="img/SXDDDDDDDD.png" alt="Logo Cyber Flower">
                 <span class="logo-texto">CYBER FLOWER</span>
+            </a>
 
-                <nav class="menu">
-                    <ul>
-                        <li><a href="#" class="activo">Inicio</a></li>
-                        <li><a href="#">Catalogo</a></li>
-                        <li><a href="#">Tecnologias</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </nav>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="activo">INICIO</a></li>
+                    <li><a href="#">CATALOGO</a></li>
+                    <li><a href="#">TECNOLOGIAS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav>
 
-                <div class="acciones">
-                    <div class="buscador">
-                        <input type="text">
-                        <span class="equis">X</span>
-                        <span class="lupa">O</span>
-                    </div>
-                    <button class="boton-icono" type="button">Carrito</button>
-                    <button class="boton-icono" type="button">Menu</button>
+            <div class="acciones">
+                <div class="buscador">
+                    <input type="text">
+                    <span class="equis">X</span>
+                    <span class="lupa">O</span>
                 </div>
-                
-            </header>
+                <button class="boton-icono" type="button">
+                    <img class="icono-imagen" src="img/shopping.png" alt="Carrito">
+                </button>
+                <button class="boton-icono" type="button">
+                    <img class="icono-imagen" src="img/hamburger-button.png" alt="Menu">
+                </button>
+            </div>
+        </header>
 
+        <!-- Portada grande con el titulo CATALOGO -->
+        <section class="portada">
+            <img class="portada-fondo" src="img/portada.png" alt="Calle cyberpunk con flores rosas">
+            <div class="portada-velo"></div>
+            <div class="portada-texto">
+                <p class="etiqueta">BELLEZA Y TECNOLOGIA</p>
+                <h1 class="titulo">CATALOGO</h1>
+                <p class="descripcion">Explora nuestra colección de arreglos <br> únicos inspirados en la belleza del futuro</p>
+                <a href="#" class="boton">VERR CATALOGO <span>></span></a>
+            </div>
+        </section>
 
+        <!-- Catalogo con las 4 tarjetas de flores -->
+        <section class="catalogo">
+            <span class="flecha-izq"><</span>
+            <span class="flecha-der">></span>
 
+            <div class="rejilla">
 
-        </div>
-       
-    </body>
+                <div class="tarjeta">
+                    <div class="tarjeta-foto">
+                        <span class="oferta">-10 %</span>
+                        <img src="img/1.png" alt="Destello Aurora">
+                    </div>
+                    <h3 class="nombre">DESTELLO AURORA</h3>
+                    <div class="fila">
+                        <p class="precios"><strong>$899 MXN</strong> <s>$999 MXN</s></p>
+                        <button class="carrito" type="button">Carrito</button>
+                    </div>
+                </div>
 
+                <div class="tarjeta">
+                    <div class="tarjeta-foto">
+                        <span class="oferta">-10 %</span>
+                        <img src="img/2.png" alt="Vortice Rosa">
+                    </div>
+                    <h3 class="nombre">VORTICE ROSA</h3>
+                    <div class="fila">
+                        <p class="precios"><strong>$899 MXN</strong> <s>$999 MXN</s></p>
+                        <button class="carrito" type="button">Carrito</button>
+                    </div>
+                </div>
+
+                <div class="tarjeta">
+                    <div class="tarjeta-foto">
+                        <span class="oferta">-10 %</span>
+                        <img src="img/3.png" alt="Orquideas Cyber">
+                    </div>
+                    <h3 class="nombre">ORQUIDEAS CYBER</h3>
+                    <div class="fila">
+                        <p class="precios"><strong>$899 MXN</strong> <s>$999 MXN</s></p>
+                        <button class="carrito" type="button">Carrito</button>
+                    </div>
+                </div>
+
+                <div class="tarjeta">
+                    <div class="tarjeta-foto">
+                        <span class="oferta">-10 %</span>
+                        <img src="img/4.png" alt="Orquidea Nexus">
+                    </div>
+                    <h3 class="nombre">ORQUIDEA NEXUS</h3>
+                    <div class="fila">
+                        <p class="precios"><strong>$899 MXN</strong> <s>$999 MXN</s></p>
+                        <button class="carrito" type="button">Carrito</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="puntos">
+                <span class="punto activo"></span>
+                <span class="punto"></span>
+                <span class="punto"></span>
+                <span class="punto"></span>
+            </div>
+        </section>
+
+    </div>
+
+</body>
 </html>

@@ -1,3 +1,4 @@
+/* Colores principales: fondo #050816 y rosa #FF1493 */
 :root {
     --fondo: #050816;
     --rosa: #FF1493;
@@ -16,17 +17,20 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--fondo-body);
+    background-color: var(--fondo);
     color: white;
+    width: 100%;
+    min-height: 100vh;
 }
 
-/* pagina de inicio */
+/* Caja principal que encierra todo - cubre toda la pantalla */
 .pagina {
-    width: 1160px;
-    margin: 24px auto;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 40px;
     background-color: var(--fondo);
-    border: 1px solid var(--rosa);
-    border-radius: 18px;
+    border: 2px solid var(--rosa);
     overflow: hidden;
 }
 
@@ -34,8 +38,8 @@ body {
 .barra {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
+    padding: 12px 20px;
+    gap: 16px;
 }
 
 /* Logo con imagen al lado del titulo */
@@ -43,34 +47,49 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .logo-imagen {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
 }
 
 .logo-texto {
     color: var(--rosa);
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
-    margin-left: 8px;
+    margin-left: 6px;
 }
 
 /* Menu del centro */
+.menu {
+    flex-shrink: 0;
+}
+
 .menu ul {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     list-style: none;
+    gap: 16px;
+    margin-left: 10px;
 }
 
 .menu li {
-    margin-left: 18px;
+    margin-left: 0;
+}
+
+.menu li:first-child {
+    margin-left: 0;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
+    white-space: nowrap;
 }
 
 .menu a.activo {
@@ -81,6 +100,9 @@ body {
 .acciones {
     display: flex;
     align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .buscador {
@@ -89,8 +111,11 @@ body {
     background: white;
     border: 1px solid var(--rosa);
     border-radius: 20px;
-    padding: 5px 12px;
-    width: 280px;
+    padding: 4px 10px;
+    width: 100%;
+    flex: 1;
+    max-width: 550px;
+    min-width: 180px;
 }
 
 .buscador input {
@@ -114,11 +139,192 @@ body {
 .boton-icono {
     background: transparent;
     border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.icono-imagen {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+/* Portada grande */
+.portada {
+    position: relative;
+    margin: 10px 20px 0 20px;
+    height: 420px;
+    border: 1px solid var(--rosa);
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--fondo);
+}
+
+.portada-fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portada-velo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4;
+}
+
+.portada-texto {
+    position: relative;
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 560px;
+}
+
+.etiqueta {
+    color: var(--celeste);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    color: var(--rosa);
+    font-size: 72px;
+    margin-bottom: 12px;
+}
+
+.descripcion {
     color: white;
-    margin-left: 12px;
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.boton {
+    display: inline-block;
+    color: var(--rosa);
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid var(--rosa);
+    background-color: var(--fondo);
+    padding: 14px 22px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.boton span {
+    margin-left: 40px;
+}
+
+/* Seccion del catalogo */
+.catalogo {
+    position: relative;
+    padding: 30px 60px 10px 60px;
+}
+
+/* Rejilla de 4 tarjetas */
+.rejilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 22px;
+}
+
+/* Cada tarjeta de flor */
+.tarjeta {
+    background-color: var(--fondo);
+    border: 1px solid var(--rosa);
+}
+
+.tarjeta-foto {
+    position: relative;
+    height: 250px;
+    background-color: var(--fondo-foto);
+    overflow: hidden;
+}
+
+.tarjeta-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.oferta {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: var(--rosa);
+    color: white;
+    font-size: 11px;
+    padding: 4px 8px;
+}
+
+.nombre {
+    font-size: 11px;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+}
+
+.precios strong {
+    font-size: 12px;
+}
+
+.precios s {
+    font-size: 10px;
+    color: gray;
+    margin-left: 6px;
+}
+
+.carrito {
+    background-color: var(--rosa);
+    color: white;
+    border: 1px solid var(--rosa);
+    width: 60px;
+    height: 30px;
     cursor: pointer;
 }
 
+/* Flechas de los lados */
+.flecha-izq {
+    position: absolute;
+    left: 20px;
+    top: 180px;
+    color: var(--rosa);
+    font-size: 22px;
+}
 
+.flecha-der {
+    position: absolute;
+    right: 20px;
+    top: 180px;
+    color: var(--rosa);
+    font-size: 22px;
+}
 
+/* Puntitos de abajo */
+.puntos {
+    text-align: center;
+    margin-top: 28px;
+}
 
+.punto {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--rosa);
+    background-color: var(--fondo);
+    margin-left: 14px;
+}
+
+.punto.activo {
+    background-color: var(--rosa);
+}
